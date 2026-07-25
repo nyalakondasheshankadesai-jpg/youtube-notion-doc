@@ -1,0 +1,26 @@
+{
+  "skill_name": "youtube-notion-doc",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Create structured Notion documentation for the YouTube video \"Python in 100 Seconds\" (https://www.youtube.com/watch?v=x7X9w_GIm1s).",
+      "expected_output": "A structured Notion page explaining the Python language, its creator, key features, and history, along with relevant screenshots.",
+      "files": [],
+      "expectations": [
+        "The documentation mentions Python's creator Guido van Rossum.",
+        "The documentation includes sections for Video Info, Timeline Notes, Summary, Glossary, and Action Items.",
+        "The documentation contains screenshots at key code explanation timestamps."
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Create structured Notion documentation for the local video file \"f1_victory.mp4\" located in the workspace.",
+      "expected_output": "A structured Notion page documenting the formula 1 victory video with key timestamps and visual descriptions.",
+      "files": ["f1_victory.mp4"],
+      "expectations": [
+        "The documentation includes sections for Video Info, Timeline Notes, and Summary.",
+        "The documentation contains visual descriptions of the F1 car or podium celebrations."
+      ]
+    }
+  ]
+}
