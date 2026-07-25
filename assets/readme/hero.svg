@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-width="1" opacity="0.15">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="360"/>
+    <line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="800" y1="0" x2="800" y2="360"/>
+    <line x1="1000" y1="0" x2="1000" y2="360"/>
+  </g>
+
+  <!-- Decorative Orbs -->
+  <circle cx="150" cy="80" r="140" fill="#6366F1" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="1050" cy="280" r="160" fill="#A855F7" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Main Content Grid -->
+  <!-- Left Header Column -->
+  <g transform="translate(60, 75)">
+    <!-- Badge -->
+    <rect width="160" height="28" rx="14" fill="#312E81" stroke="#4C1D95" stroke-width="1"/>
+    <text x="80" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#A7F3D0" text-anchor="middle">AI AGENT SKILL</text>
+
+    <!-- Main Title -->
+    <text x="0" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="#F8FAFC" letter-spacing="-0.5">YouTube Notion Doc</text>
+    <rect x="0" y="84" width="340" height="4" rx="2" fill="url(#accentGrad)"/>
+
+    <!-- Subtitle -->
+    <text x="0" y="122" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="400" fill="#94A3B8">
+      Transform YouTube videos &amp; transcripts into
+    </text>
+    <text x="0" y="146" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="400" fill="#94A3B8">
+      structured, visual study guides in Notion.
+    </text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 175)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="130" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="65" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#38BDF8" text-anchor="middle">🎥 Transcript API</text>
+
+      <!-- Tag 2 -->
+      <rect x="140" y="0" width="145" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="212" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#F472B6" text-anchor="middle">📸 Visual Frame QA</text>
+
+      <!-- Tag 3 -->
+      <rect x="295" y="0" width="135" height="30" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="362" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34D399" text-anchor="middle">📝 Notion Integration</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Column: Diagram Card -->
+  <g transform="translate(580, 45)" filter="url(#cardShadow)">
+    <rect width="560" height="270" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Pipeline Diagram Nodes -->
+    <!-- Node 1: YouTube -->
+    <g transform="translate(40, 50)">
+      <rect width="130" height="70" rx="10" fill="#0F172A" stroke="#EF4444" stroke-width="1.5"/>
+      <text x="65" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC" text-anchor="middle">YouTube</text>
+      <text x="65" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Video &amp; Subtitles</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M 180 85 L 210 85" stroke="#64748B" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="215,85 207,80 207,90" fill="#64748B"/>
+
+    <!-- Node 2: AI Processor -->
+    <g transform="translate(220, 50)">
+      <rect width="140" height="70" rx="10" fill="#0F172A" stroke="#818CF8" stroke-width="1.5"/>
+      <text x="70" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#818CF8" text-anchor="middle">AI Agent</text>
+      <text x="70" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Domain Analysis</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M 370 85 L 400 85" stroke="#64748B" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="405,85 397,80 397,90" fill="#64748B"/>
+
+    <!-- Node 3: Notion -->
+    <g transform="translate(410, 50)">
+      <rect width="110" height="70" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="1.5"/>
+      <text x="55" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#10B981" text-anchor="middle">Notion</text>
+      <text x="55" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Study Doc</text>
+    </g>
+
+    <!-- Bottom Pipeline Row: Frame Extractor & Screenshots -->
+    <g transform="translate(130, 160)">
+      <rect width="300" height="60" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+      <text x="150" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#C084FC" text-anchor="middle">📸 Targeted Screenshot Capture</text>
+      <text x="150" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Exact Timestamps &amp; Visual Evidence</text>
+    </g>
+
+    <!-- Connecting Vertical Line -->
+    <path d="M 290 120 L 290 155" stroke="#64748B" stroke-width="2"/>
+    <polygon points="290,158 285,150 295,150" fill="#64748B"/>
+  </g>
+</svg>
