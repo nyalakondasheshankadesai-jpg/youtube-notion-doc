@@ -42,6 +42,37 @@ Instead of generating generic summary paragraphs, it combines **transcript break
 
 ---
 
+## 📂 Repository Structure
+
+```text
+youtube-notion-doc/
+│
+├── 📄 SKILL.md                 # System prompt instructions & domain analysis rules for AI agents
+├── 📄 README.md                # Project documentation & setup instructions
+│
+├── 📁 assets/                  # Project media & visual branding
+│   └── 📁 readme/
+│       └── 🎨 hero.svg         # SVG hero banner and component architecture diagram
+│
+├── 📁 scripts/                 # Core deterministic python tools
+│   └── 🐍 get_youtube_data.py  # Retrieves YouTube video metadata & subtitles via YouTube API
+│
+└── 📁 evals/                   # Quality assurance & evaluation benchmarks
+    └── 📋 evals.json           # Test cases & expected output schemas for validation
+```
+
+### Component Details
+
+| File / Folder | Type | Purpose & Description |
+| :--- | :--- | :--- |
+| **`SKILL.md`** | AI Prompt SOP | The core skill instruction file guiding AI agents through transcript processing, timestamp detection, screenshot capture, and Notion block layout. |
+| **`README.md`** | Documentation | The repository homepage containing feature summaries, setup commands, visual architecture diagrams, and usage examples. |
+| **`assets/readme/hero.svg`** | SVG Asset | Scalable vector graphic used as the hero header banner for the repository. |
+| **`scripts/get_youtube_data.py`** | Python Tool | Fetches metadata (title, duration, channel) and full timestamped transcript arrays from YouTube video URLs. |
+| **`evals/evals.json`** | Benchmark | Contains test evaluation cases to verify skill execution consistency across video inputs. |
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Prerequisites
@@ -61,23 +92,6 @@ This generates `.tmp/video_info.json` containing structured transcript blocks an
 Use your Notion Integration Key or Notion MCP server to publish the page:
 ```bash
 python .tmp/upload_screenshots_and_update_notion.py
-```
-
----
-
-## 📂 Directory Structure
-
-```text
-youtube-notion-doc/
-├── SKILL.md                 # Core AI Agent instructions & documentation template
-├── README.md                # Repository overview & setup guide
-├── assets/
-│   └── readme/
-│       └── hero.svg         # SVG hero banner
-├── scripts/
-│   └── get_youtube_data.py  # Transcript & metadata extraction script
-└── evals/
-    └── evals.json           # Evaluation test cases
 ```
 
 ---
